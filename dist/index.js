@@ -7,6 +7,7 @@
   var voteAgainstButton = document.getElementById('vote-against-button')
   var image = document.getElementsByClassName('image')
   var readMore = document.getElementsByClassName('read-more')
+  var voteResults = document.getElementsByClassName('vote-results')
 
   const getBallot = () => wa[2018][Math.floor(Math.random(wa[2018].length)*wa[2018].length)]
 
@@ -31,4 +32,18 @@
   hamburger.addEventListener('click', () => {
     window.location.href = '/list'
   })
+
+  const vote = (vote) => {
+    readMore[0].className = 'read-more'
+    voteResults[0].className = 'vote-results'
+    if(vote === 'for') {
+      voteForButton.className = 'vote selected'
+      voteAgainstButton.className = 'vote'
+    } else {
+      voteForButton.className = 'vote'
+      voteAgainstButton.className = 'vote selected'
+    }
+  }
+  voteForButton.addEventListener('click', vote)
+  voteAgainstButton.addEventListener('click', vote)
 })()
