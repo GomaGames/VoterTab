@@ -9,15 +9,18 @@
   var readMore = document.getElementsByClassName('read-more')
   var voteResults = document.getElementsByClassName('vote-results')
   var endorsements = document.getElementsByClassName('endorsements')
+  var ballotInstructions = document.getElementsByClassName('ballot-instructions')
+  var ballotSubtitle = document.getElementById('ballot-subtitle')
 
   const getBallot = () => wa[2018][Math.floor(Math.random(wa[2018].length)*wa[2018].length)]
 
   const renderBallot = () => {
     let ballot = getBallot()
     ballotDescrition.innerHTML = ballot.description
-    ballotTitle.innerHTML = `${ballot.number}: ${ballot.title}`
+    ballotTitle.innerHTML = ballot.title
     voteForButton.innerHTML = ballot.vote.for
     voteAgainstButton.innerHTML = ballot.vote.against
+    ballotSubtitle.innerHTML = ballot.number
     // image[0].setAttribute('src', ballot.icon)
     ballot.readMore.map(item => {
       var readMoreItem = document.createElement("a")
