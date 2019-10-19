@@ -243,3 +243,6 @@ p {
     margin-bottom: 20px; }
     .read-more-block a:hover {
       color: #444444; }
+
+.hidden {
+  display: none; }
