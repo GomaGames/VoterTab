@@ -13,6 +13,8 @@
   var ballotSubtitle = document.getElementById('ballot-subtitle')
   var voteDescriptionFor = document.getElementById('vote-description-for')
   var voteDescriptionAgaisnt = document.getElementById('vote-description-against')
+  var ballotInstructionsTitle = document.getElementById('ballot-instructions-title')
+  var ballotVote = document.getElementById('ballot-vote')
   var callToAction = document.getElementsByClassName('call-to-action')
   var readMoreBlock = document.getElementsByClassName('read-more-block')
 
@@ -28,6 +30,7 @@
     voteDescriptionFor.innerHTML = ballot.vote.for
     voteDescriptionAgaisnt.innerHTML = ballot.vote.against
     image[0].setAttribute('src', ballot.icon)
+    ballotInstructionsTitle.innerHTML = ballot.number
     ballot.readMore.map(item => {
       var readMoreItem = document.createElement("a")
       readMoreItem.setAttribute('href', item.href)
@@ -39,22 +42,19 @@
       var endorsementItem = document.createElement("a")
       endorsementItem.setAttribute('href', item.href)
       endorsementItem.setAttribute('class', 'endorsement-item')
-      endorsementItem.innerHTML = `${item.source}: ${item.endorsement}`
+      endorsementItem.innerHTML = `<strong>${item.endorsement}</strong> : ${item.source}`
       endorsements[0].append(endorsementItem)
     })
   }
 
   renderBallot()
-
-  // hamburger.addEventListener('click', () => {
-  //   window.location.href = '/list'
-  // })
-
+  
   const vote = (vote) => {
     voteResults[0].className = 'vote-results'
     ballotInstructions[0].className = 'ballot-instructions'
     callToAction[0].className = 'call-to-action'
     readMoreBlock[0].className = 'read-more-block'
+    ballotVote.innerHTML = `Vote ${vote === 'for' ? '"Yes"' : '"No"'}`
     if(vote === 'for') {
       voteForButton.className = 'vote selected'
       voteAgainstButton.className = 'vote'

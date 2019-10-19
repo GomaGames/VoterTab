@@ -290,33 +290,40 @@ p{
 
 .read-more-block{
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   max-width: 700px;
   margin: auto;
+  margin-bottom: 50px;
+  margin-top: 30px;
 
   h2{
     flex: 0 0 100%;
+    padding: 10px 0;
+    border-top: 2px solid $light-blue;
+    border-bottom: 2px solid $light-blue;
+    text-align: center;
   }
 
   .read-more{
     flex: 0 0 60%;
+    text-align: left;
+    padding: 20px 20px 0 0;
   }
 
   .endorsements{
     flex: 0 0 40%;
+    text-align: left;
+    padding: 20px 0 0 0;
   }
 
   a{
     color: $dark-blue;
     // text-decoration: none;
     display: block;
+    margin-bottom: 20px;
 
     &:hover{
       color: $grey;
-    }
-
-    + a{
-      margin-top: 10px;
     }
   }
 }
@@ -349,5 +356,5 @@ p{
 // }
 
 .hidden {
-  // display: none;
+  display: none;
 }
