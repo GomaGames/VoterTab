@@ -31,7 +31,7 @@
       endorsementItem.setAttribute('href', item.href)
       endorsementItem.setAttribute('class', 'endorsement-item')
       endorsementItem.innerHTML = `${item.source}: ${item.endorsement}`
-      readMore[0].append(endorsementItem)
+      endorsements[0].append(endorsementItem)
     })
   }
 
