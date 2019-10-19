@@ -9,15 +9,23 @@
   var readMore = document.getElementsByClassName('read-more')
   var voteResults = document.getElementsByClassName('vote-results')
   var endorsements = document.getElementsByClassName('endorsements')
+  var ballotInstructions = document.getElementsByClassName('ballot-instructions')
+  var ballotSubtitle = document.getElementById('ballot-subtitle')
+  var voteDescriptionFor = document.getElementById('vote-description-for')
+  var voteDescriptionAgaisnt = document.getElementById('vote-description-against')
+  var callToAction = document.getElementsByClassName('call-to-action')
 
   const getBallot = () => wa[2018][Math.floor(Math.random(wa[2018].length)*wa[2018].length)]
 
   const renderBallot = () => {
     let ballot = getBallot()
     ballotDescrition.innerHTML = ballot.description
-    ballotTitle.innerHTML = `${ballot.number}: ${ballot.title}`
+    ballotTitle.innerHTML = ballot.title
     voteForButton.innerHTML = ballot.vote.for
     voteAgainstButton.innerHTML = ballot.vote.against
+    ballotSubtitle.innerHTML = ballot.number
+    voteDescriptionFor.innerHTML = ballot.vote.for
+    voteDescriptionAgaisnt.innerHTML = ballot.vote.against
     // image[0].setAttribute('src', ballot.icon)
     ballot.readMore.map(item => {
       var readMoreItem = document.createElement("a")
@@ -42,9 +50,10 @@
   // })
 
   const vote = (vote) => {
-    console.log('HELLO')
     readMore[0].className = 'read-more'
     voteResults[0].className = 'vote-results'
+    ballotInstructions[0].className = 'ballot-instructions'
+    callToAction[0].className = 'call-to-action'
     if(vote === 'for') {
       voteForButton.className = 'vote selected'
       voteAgainstButton.className = 'vote'
