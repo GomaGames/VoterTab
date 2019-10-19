@@ -291,6 +291,12 @@ p{
 .read-more-block{
   display: flex;
   flex-flow: row nowrap;
+  max-width: 700px;
+  margin: auto;
+
+  h2{
+    flex: 0 0 100%;
+  }
 
   .read-more{
     flex: 0 0 60%;
@@ -302,8 +308,12 @@ p{
 
   a{
     color: $dark-blue;
-    text-decoration: none;
+    // text-decoration: none;
     display: block;
+
+    &:hover{
+      color: $grey;
+    }
 
     + a{
       margin-top: 10px;
@@ -339,5 +349,5 @@ p{
 // }
 
 .hidden {
-  display: none;
+  // display: none;
 }
