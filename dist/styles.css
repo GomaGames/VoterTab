@@ -218,19 +218,28 @@ p {
 
 .read-more-block {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   max-width: 700px;
-  margin: auto; }
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 30px; }
   .read-more-block h2 {
-    flex: 0 0 100%; }
+    flex: 0 0 100%;
+    padding: 10px 0;
+    border-top: 2px solid #BDCBCD;
+    border-bottom: 2px solid #BDCBCD;
+    text-align: center; }
   .read-more-block .read-more {
-    flex: 0 0 60%; }
+    flex: 0 0 60%;
+    text-align: left;
+    padding: 20px 20px 0 0; }
   .read-more-block .endorsements {
-    flex: 0 0 40%; }
+    flex: 0 0 40%;
+    text-align: left;
+    padding: 20px 0 0 0; }
   .read-more-block a {
     color: #51858D;
-    display: block; }
+    display: block;
+    margin-bottom: 20px; }
     .read-more-block a:hover {
       color: #444444; }
-    .read-more-block a + a {
-      margin-top: 10px; }
