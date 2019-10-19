@@ -17,7 +17,7 @@
     ballotTitle.innerHTML = `${ballot.number}: ${ballot.title}`
     voteForButton.innerHTML = ballot.vote.for
     voteAgainstButton.innerHTML = ballot.vote.against
-    image[0].setAttribute('src', ballot.icon)
+    // image[0].setAttribute('src', ballot.icon)
     ballot.readMore.map(item => {
       var readMoreItem = document.createElement("a")
       readMoreItem.setAttribute('href', item.href)
@@ -29,11 +29,12 @@
 
   renderBallot()
 
-  hamburger.addEventListener('click', () => {
-    window.location.href = '/list'
-  })
+  // hamburger.addEventListener('click', () => {
+  //   window.location.href = '/list'
+  // })
 
   const vote = (vote) => {
+    console.log('HELLO')
     readMore[0].className = 'read-more'
     voteResults[0].className = 'vote-results'
     if(vote === 'for') {
