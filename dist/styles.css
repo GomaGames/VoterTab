@@ -228,7 +228,8 @@ p {
     padding: 10px 0;
     border-top: 2px solid #BDCBCD;
     border-bottom: 2px solid #BDCBCD;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 20px; }
   .read-more-block .read-more {
     flex: 0 0 60%;
     text-align: left;
