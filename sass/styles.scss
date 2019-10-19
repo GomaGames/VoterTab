@@ -72,7 +72,7 @@ p, button, li, h2{
 }
 
 .hidden {
-  display: none;
+  // display: none;
 }
 
 .search-container {
@@ -92,6 +92,10 @@ input{
   // line-height: 36px;
   padding: 5px 20px 7px;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+
+  &:focus{
+    outline: none;
+  }
 
   &::placeholder{
     color: #CCCCCC;
@@ -209,29 +213,34 @@ p{
 
 .vote-results{
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   max-width: 700px;
   margin: auto;
+  margin-top: 30px;
 
   > h2{
     flex: 0 0 100%;
+    padding: 10px 0;
+    border-top: 2px solid $light-blue;
+    border-bottom: 2px solid $light-blue;
 
-    .vote-results-left{
-      flex: 0 0 50%;
-    }
-
-    .vote-results-right{
-      flex: 0 0 50%;
-    }
   }
-}
+  
+  .vote-results-left{
+    flex: 0 0 50%;
+    border-right: 1px solid $light-blue;
+  }
 
-.vote-results-left{
-  flex: 0 0 50%;
-}
+  .vote-results-right{
+    flex: 0 0 50%;
+    border-left: 1px solid $light-blue;
+  }
 
-.vote-results-right{
-  flex: 0 0 50%;
+  h1{
+    font-size: 100px;
+    text-align: center;
+  }
+  
 }
 
 // Your Issues
