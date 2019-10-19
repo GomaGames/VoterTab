@@ -6,7 +6,7 @@ window.VoterTab.data = {
         title: "Carbon Fee",
         number: "Initiative Measure no. 1631",
         description: "Attempts to rein in carbon producers have not been successful in Washington state. Governor Jay Inslee has urged the legislature to push through legislation in 2014 and then again earlier this year, to no avail. In 2016, a carbon tax made its way to the ballot, but was handily defeated. Now comes I-1631, a carbon “fee” that would be applied to most businesses that emit carbon, though some industries and employers are left off the list. Those impacted would pay $15 per ton starting in 2020, a fee that would increase by $2 each year until reduction goals are met. The bulk of revenue would be invested in clean energy, with the remainder going to protect natural resources and assist communities overburdened by pollution.",
-        icon: "http://placekitten.com/g/200/200",
+        icon: "images/oil.png",
         vote: {
           for: "Carbon-producing companies SHOULD pay a fee.",
           against: "Carbon-producing companies SHOULD NOT pay a fee."
@@ -75,7 +75,7 @@ window.VoterTab.data = {
         title: "Food Tax",
         number: "Initiative Measure no. 1634",
         description: "I-1634 would prevent cities and towns throughout Washington from enacting new taxes or fees or raising existing ones on food or beverage “grocery items.” No municipality in the state taxes the sale of food at grocery stores currently, but Seattle passed a “sweetened beverage” tax in 2017. I-1634’s proponents say Seattle’s tax showed there was a loophole that would allow cities to pass taxes on food. Opponents say it is an effort by the soda industry to block local municipalities from following Seattle’s lead on soda and sweetened beverage taxation. Of the $20.2 million in Yes on 1634 campaign contributions, more than $19.9 million comes from Coca Cola, Pepsi, Dr. Pepper and Snapple.",
-        icon: "http://placekitten.com/g/200/200",
+        icon: "images/food.png",
         vote: {
           for: "PREVENT new taxes or fees on “grocery items.”",
           against: "ALLOW new taxes or fees on “grocery items.”"
@@ -129,7 +129,7 @@ window.VoterTab.data = {
         title: "Gun Regulation",
         number: "Initiative Measure no. 1639",
         description: "For the third election in a row, Washington voters will decide whether to expand gun regulation in the state. Voters overwhelmingly approved measures in 2014 and 2016, but this year’s is the most significant suite of changes. If passed, the law would raise the minimum age to purchase a semi-automatic rifle from 18 to 21 and expand background checks while imposing a 10-day waiting period for the same firearms. The measure would also require gun owners to securely store their firearms and increase penalties up to a felony if a weapon is allowed into the hands of someone not authorized to possess one. Gun sellers would also be required to inform a buyer of the risks of a firearm. The measure nearly didn’t make the ballot after a Thurston County judge deemed the language unclear. But the Washington State Supreme Court reinstated it.",
-        icon: "http://placekitten.com/g/200/200",
+        icon: "images/gun.png",
         vote: {
           for: "MAKE these changes to gun regulations.",
           against: "DON'T MAKE these changes to gun regulations."
@@ -203,7 +203,7 @@ window.VoterTab.data = {
         title: "Deadly Force Initiative",
         number: "Initiative Measure no. 940",
         description: "What rules should govern how the police use deadly force? Initiative 940 seeks to lower the standard by which officers can be convicted of unjustified shootings. As the law is written now, “malice” must be demonstrated by the officer, a bar so high that some prosecutors say it’s virtually impossible to successfully bring negligent shooting charges against an officer. The initiative proposes removing the “malice” language and stipulates officer de-escalation and mental health training, officer-administered first aid following the shooting of a victim, and independent investigations of deadly force incidents. How the initiative made it to the ballot is a bit of a head-spinner, and what hand the legislature may have in modifying or amending this or another version of the law is worth reading up on.",
-        icon: "http://placekitten.com/g/200/200",
+        icon: "images/police.png",
         vote: {
           for: "LOWER the standard by which officers can be convicted of unjustified shootings.",
           against: "KEEP the standard as it is."
@@ -242,7 +242,7 @@ window.VoterTab.data = {
         title: "Tax on Crude Oil",
         number: "Advisory Vote No. 19: Engrossed Second Substitute Senate Bill 6269",
         description: "Advisory Vote No. 19 asks the electorate to repeal or maintain an expenditure that would strengthen oil transportation safety. The taxes in question provide money for oil-spill prevention and cleanup preparedness. (Note: Advisory Votes are non-binding expressions of voter approval or disapproval of certain taxes.)",
-        icon: "http://placekitten.com/g/200/200",
+        icon: "images/oil.png",
         vote: {
           for: "MAINTAIN expenditures that would strengthen transportation safety.",
           against: "REPEAL expenditures that would strengthen transportation safety."
@@ -286,7 +286,7 @@ window.VoterTab.data = {
         title: "Families, Education, Preschool, and Promise Levy",
         number: "Proposition No. 1",
         description: "The city levy would provide $620 million over seven years to expand preschool for lower-income families, support academic improvements and student health programs in Seattle Public Schools, and provide tuition for two years of community college under the Seattle Promise program. It replaces separate academic and preschool levies that are expiring. Supporters say that the plan will significantly improve equity for lower-income and disadvantaged students while helping all students academically and ensuring students are healthy. Opponents have raised questions about the cost and the eligibility of charter schools for preschool funding.",
-        icon: "http://placekitten.com/g/200/200",
+        icon: "images/food.png",
         vote: {
           for: "SUPPORT the city levy to improve low-income and public schools.",
           against: "OPPOSE the city levy."
