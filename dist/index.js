@@ -13,6 +13,7 @@
   var ballotSubtitle = document.getElementById('ballot-subtitle')
   var voteDescriptionFor = document.getElementById('vote-description-for')
   var voteDescriptionAgaisnt = document.getElementById('vote-description-against')
+  var callToAction = document.getElementsByClassName('call-to-action')
 
   const getBallot = () => wa[2018][Math.floor(Math.random(wa[2018].length)*wa[2018].length)]
 
@@ -49,9 +50,10 @@
   // })
 
   const vote = (vote) => {
-    console.log('HELLO')
     readMore[0].className = 'read-more'
     voteResults[0].className = 'vote-results'
+    ballotInstructions[0].className = 'ballot-instructions'
+    callToAction[0].className = 'call-to-action'
     if(vote === 'for') {
       voteForButton.className = 'vote selected'
       voteAgainstButton.className = 'vote'
