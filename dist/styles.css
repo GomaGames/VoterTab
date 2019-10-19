@@ -156,7 +156,8 @@ p {
     padding: 10px;
     position: relative;
     font-weight: bold;
-    font-size: 18px; }
+    font-size: 18px;
+    cursor: pointer; }
     .vote-buttons-container .vote.selected {
       background-color: #51858D;
       border-color: #51858D;
