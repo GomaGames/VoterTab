@@ -144,10 +144,12 @@ p {
   flex-flow: row nowrap;
   justify-content: space-between;
   margin-bottom: 30px; }
-  .vote-buttons-container button {
+  .vote-buttons-container #vote-for-button,
+  .vote-buttons-container #vote-against-button {
     flex: 0 0 49%;
     height: 80px;
-    display: block; }
+    display: block;
+    background-color: pink; }
 
 .ballot-instructions {
   max-width: 700px;
@@ -163,6 +165,12 @@ p {
   flex-flow: row nowrap;
   max-width: 700px;
   margin: auto; }
+  .vote-results > h2 {
+    flex: 0 0 100%; }
+    .vote-results > h2 .vote-results-left {
+      flex: 0 0 50%; }
+    .vote-results > h2 .vote-results-right {
+      flex: 0 0 50%; }
 
 .vote-results-left {
   flex: 0 0 50%; }
