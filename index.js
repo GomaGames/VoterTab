@@ -1,29 +1,28 @@
-var data = [
-  {
-    "id": 1,
-    "description": "blah blah"
-  },
-  {
-    "id": 2,
-    "description": "blah blah 2"
-  },
-  {
-    "id": 3,
-    "description": "blah blah 3"
-  },
-  {
-    "id": 4,
-    "description": "blah blah 4"
-  }
-]
+var wa = {
+  2018: [
+    {
+      title: "Initiative Measure no. 1631 - Carbon Fee",
+      description: "",
+      readMore: [
+        {
+          title: "Don't call it a tax: Carbon fee heads to ballot",
+          source: "Crosscut",
+          href: "https://crosscut.com/2018/08/dont-call-it-tax-carbon-fee-heads-ballot"
+        },
+      ]
+    }
+  ]
+};
 
-var ballotContainer = document.getElementById('ballot-container')
+var ballotDescrition = document.getElementById('ballot-description')
+var ballotTitle = document.getElementById('ballot-title')
 
-const getBallot = () => data[Math.floor(Math.random(data.length)*data.length)]
+const getBallot = () => wa[2018][Math.floor(Math.random(wa[2018].length)*wa[2018].length)]
 
 const renderBallot = () => {
   let ballot = getBallot()
-  ballotContainer.innerHTML = ballot.description
+  ballotDescrition.innerHTML = ballot.description
+  ballotTitle.innerHTML = ballot.title
 }
 
 renderBallot()
