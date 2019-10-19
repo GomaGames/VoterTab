@@ -5,7 +5,7 @@
   var hamburger = document.getElementById('hamburger')
   var voteForButton = document.getElementById('vote-for-button')
   var voteAgainstButton = document.getElementById('vote-against-button')
-  var image = document.getElementsByClassName('image')
+  var image = document.getElementsByClassName('ballot-icon')
   var readMore = document.getElementsByClassName('read-more')
   var voteResults = document.getElementsByClassName('vote-results')
   var endorsements = document.getElementsByClassName('endorsements')
@@ -26,7 +26,7 @@
     ballotSubtitle.innerHTML = ballot.number
     voteDescriptionFor.innerHTML = ballot.vote.for
     voteDescriptionAgaisnt.innerHTML = ballot.vote.against
-    // image[0].setAttribute('src', ballot.icon)
+    image[0].setAttribute('src', ballot.icon)
     ballot.readMore.map(item => {
       var readMoreItem = document.createElement("a")
       readMoreItem.setAttribute('href', item.href)
