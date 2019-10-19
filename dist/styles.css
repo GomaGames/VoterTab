@@ -1,29 +1,174 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* STYLES */
+body {
+  font-family: "catamaran", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "mongoose", sans-serif; }
+
+p, button, li, h2 {
+  font-family: "catamaran", sans-serif; }
+
 .hidden {
   display: none; }
 
 .search-container {
-  border: 1px solid red;
+  background-color: #EBECEC;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px; }
+  padding: 12px 0; }
+
+input {
+  border-radius: 18px;
+  border: none;
+  font-family: "catamaran", sans-serif;
+  font-size: 14px;
+  width: 400px;
+  padding: 5px 20px 7px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15); }
+  input::placeholder {
+    color: #CCCCCC; }
 
 #hamburger div {
-  width: 30px;
-  height: 5px;
-  background: black;
-  margin-top: 2px; }
+  display: none; }
 
 .content-container {
-  border: 1px solid blue;
   text-align: center; }
 
 .vote-buttons-container {
-  border: 1px solid green;
-  height: 50px; }
+  max-width: 700px;
+  margin: auto; }
 
-.ballot-content {
-  border: 1px solid purple; }
+.ballot {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 30px; }
+
+.ballot-left {
+  flex: 0 0 60%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center; }
+  .ballot-left h1 {
+    margin-bottom: 5px; }
+
+.ballot-right {
+  flex: 0 0 40%;
+  padding: 30px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end; }
+  .ballot-right img {
+    display: block;
+    height: 200px;
+    width: auto; }
+
+.ballot-text {
+  flex: 0 0 100%; }
+
+h1 {
+  font-size: 66px;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 1px;
+  color: #444444; }
+
+h2 {
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #51858D;
+  text-align: left; }
+
+p {
+  text-align: left;
+  color: #444444;
+  font-size: 14px;
+  line-height: 1.5; }
+
+.vote-buttons-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 30px; }
+  .vote-buttons-container button {
+    flex: 0 0 49%;
+    height: 80px;
+    display: block; }
+
+.ballot-instructions {
+  max-width: 700px;
+  margin: auto;
+  border: 2px solid #BDCBCD; }
+  .ballot-instructions h1 {
+    text-align: center; }
+  .ballot-instructions h2 {
+    text-align: center; }
+
+.vote-results {
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 700px;
+  margin: auto; }
+
+.vote-results-left {
+  flex: 0 0 50%; }
+
+.vote-results-right {
+  flex: 0 0 50%; }
 
 .list-item {
   height: 100px;
