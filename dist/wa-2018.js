@@ -282,6 +282,40 @@ window.VoterTab.data = {
           }
         ]
       },
+      {
+        title: "Families, Education, Preschool, and Promise Levy",
+        number: "Proposition No. 1",
+        description: "The city levy would provide $620 million over seven years to expand preschool for lower-income families, support academic improvements and student health programs in Seattle Public Schools, and provide tuition for two years of community college under the Seattle Promise program. It replaces separate academic and preschool levies that are expiring. Supporters say that the plan will significantly improve equity for lower-income and disadvantaged students while helping all students academically and ensuring students are healthy. Opponents have raised questions about the cost and the eligibility of charter schools for preschool funding.",
+        icon: "http://placekitten.com/g/200/200",
+        vote: {
+          for: "SUPPORT the city levy to improve low-income and public schools.",
+          against: "OPPOSE the city levy."
+        },
+        readMore: [
+          {
+            "title": "Arguments for and against Seattle’s Families, Education, Preschool Levy",
+            "source": "Crosscut",
+            "href": "https://crosscut.com/2018/10/arguments-and-against-seattles-families-education-preschool-levy"
+          },
+          {
+            "title": "Seattle’s property tax levy to test voters’ generosity toward education",
+            "source": "The Seattle Times",
+            "href": "https://www.seattletimes.com/seattle-news/politics/for-seattles-big-education-levy-its-mostly-all-support-and-very-little-opposition/"
+          }
+        ],
+        endorsements: [
+          {
+            "source": "The Seattle Times",
+            "endorsement": "Yes",
+            "href": "https://www.seattletimes.com/opinion/editorials/the-times-recommends-vote-yes-for-families-education-preschool-and-promise-levy/"
+          },
+          {
+            "source": "The Stranger",
+            "endorsement": "Yes",
+            "href": "https://www.thestranger.com/features/2018/10/10/33619203/the-strangers-endorsements-for-the-november-6-2018-general-election#Prop1"
+          }
+        ]
+      },
     ]
   }
 }
