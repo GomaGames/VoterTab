@@ -44,6 +44,6 @@
       voteAgainstButton.className = 'vote selected'
     }
   }
-  voteForButton.addEventListener('click', vote)
+  voteForButton.addEventListener('click', () => vote('for'))
   voteAgainstButton.addEventListener('click', vote)
 })()
