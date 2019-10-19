@@ -18,3 +18,20 @@
 
 .ballot-content {
   border: 1px solid purple; }
+
+.list-item {
+  height: 100px;
+  border: 1px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .list-item .checkbox {
+    width: 50px; }
+  .list-item .buttons {
+    width: 100px; }
+  .list-item div {
+    border: 1px solid red;
+    height: 50px; }
+
+.list-item-content {
+  width: 100%; }
