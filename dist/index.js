@@ -5,6 +5,7 @@
   var hamburger = document.getElementById('hamburger')
   var voteForButton = document.getElementById('vote-for-button')
   var voteAgainstButton = document.getElementById('vote-against-button')
+  var image = document.getElementsByClassName('image')
 
   const getBallot = () => wa[2018][Math.floor(Math.random(wa[2018].length)*wa[2018].length)]
 
@@ -14,6 +15,7 @@
     ballotTitle.innerHTML = ballot.title
     voteForButton.innerHTML = ballot.vote.for
     voteAgainstButton.innerHTML = ballot.vote.against
+    image[0].setAttribute('src', ballot.icon)
   }
 
   renderBallot()
