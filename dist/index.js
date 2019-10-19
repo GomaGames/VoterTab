@@ -8,6 +8,7 @@
   var image = document.getElementsByClassName('image')
   var readMore = document.getElementsByClassName('read-more')
   var voteResults = document.getElementsByClassName('vote-results')
+  var endorsements = document.getElementsByClassName('endorsements')
 
   const getBallot = () => wa[2018][Math.floor(Math.random(wa[2018].length)*wa[2018].length)]
 
@@ -24,6 +25,13 @@
       readMoreItem.setAttribute('class', 'read-more-item')
       readMoreItem.innerHTML = item.title
       readMore[0].append(readMoreItem)
+    })
+    ballot.endorsements.map(item => {
+      var endorsementItem = document.createElement("a")
+      endorsementItem.setAttribute('href', item.href)
+      endorsementItem.setAttribute('class', 'endorsement-item')
+      endorsementItem.innerHTML = `${item.source}: ${item.endorsement}`
+      readMore[0].append(endorsementItem)
     })
   }
 
