@@ -12,7 +12,7 @@
   var ballotInstructions = document.getElementsByClassName('ballot-instructions')
   var ballotSubtitle = document.getElementById('ballot-subtitle')
   var voteDescriptionFor = document.getElementById('vote-description-for')
-  var voteDescriptionAgaisnt = document.getElementById('vote-description-agaisnt')
+  var voteDescriptionAgaisnt = document.getElementById('vote-description-against')
 
   const getBallot = () => wa[2018][Math.floor(Math.random(wa[2018].length)*wa[2018].length)]
 
