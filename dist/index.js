@@ -42,7 +42,7 @@
       var endorsementItem = document.createElement("a")
       endorsementItem.setAttribute('href', item.href)
       endorsementItem.setAttribute('class', 'endorsement-item')
-      endorsementItem.innerHTML = `${item.source}: ${item.endorsement}`
+      endorsementItem.innerHTML = `<strong>${item.endorsement}</strong> : ${item.source}`
       endorsements[0].append(endorsementItem)
     })
   }
