@@ -8,6 +8,12 @@
   justify-content: center;
   height: 100px; }
 
+#hamburger div {
+  width: 30px;
+  height: 5px;
+  background: black;
+  margin-top: 2px; }
+
 .content-container {
   border: 1px solid blue;
   text-align: center; }
