@@ -12,7 +12,7 @@
   const renderBallot = () => {
     let ballot = getBallot()
     ballotDescrition.innerHTML = ballot.description
-    ballotTitle.innerHTML = ballot.title
+    ballotTitle.innerHTML = `${ballot.number}: ${ballot.title}`
     voteForButton.innerHTML = ballot.vote.for
     voteAgainstButton.innerHTML = ballot.vote.against
     image[0].setAttribute('src', ballot.icon)
