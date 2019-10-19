@@ -1,0 +1,22 @@
+{
+  "name": "Voter-Tab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp serve",
+    "deploy": "node publish.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-serve": "^1.4.0",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}

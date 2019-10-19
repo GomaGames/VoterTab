@@ -1,0 +1,292 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+*{
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* STYLES */
+
+$dark-blue: #51858D;
+$light-blue: #BDCBCD;
+$black: #2C2E30;
+$white: #FFFFFF;
+$grey: #444444;
+
+body{
+  font-family: "catamaran", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "mongoose", sans-serif;
+}
+
+p, button, li, h2{
+  font-family: "catamaran", sans-serif;
+}
+
+.search-container {
+  background-color: #EBECEC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+input{
+  border-radius: 18px;
+  border: none;
+  font-family: "catamaran", sans-serif;
+  font-size: 14px;
+  width: 400px;
+  // line-height: 36px;
+  padding: 5px 20px 7px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+
+  &:focus{
+    outline: none;
+  }
+
+  &::placeholder{
+    color: #CCCCCC;
+  }
+}
+
+#hamburger div {
+  display: none;
+  // width: 30px;
+  // height: 5px;
+  // background: black;
+  // margin-top: 2px;
+}
+
+.content-container {
+  text-align: center;
+}
+
+.vote-buttons-container {
+  max-width: 700px;
+  margin: auto;
+  // height: 50px;
+}
+
+.ballot {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.ballot-left{
+  flex: 0 0 70%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  h1{
+    margin-bottom: 5px;
+  }
+}
+
+.ballot-right{
+  flex: 0 0 30%;
+  padding: 30px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+
+  img{
+    display: block;
+    height: 200px;
+    width: auto;
+  }
+}
+
+.ballot-text{
+  flex: 0 0 100%;
+}
+
+h1{
+  font-size: 66px;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 1px;
+  color: $grey;
+}
+
+h2{
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $dark-blue;
+  text-align: left;
+}
+
+p{
+  text-align: left;
+  color: $grey;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.vote-buttons-container{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  .vote{
+    flex: 0 0 49%;
+    height: 80px;
+    text-align: center;
+    display: block;
+    border: 2px solid $light-blue;
+    color: $dark-blue;
+    display: flex;
+    padding: 10px;
+    position: relative;
+    font-weight: bold;
+    font-size: 18px;
+
+    &.selected{
+      background-color: $dark-blue;
+      border-color: $dark-blue;
+      color: $white;
+    }
+  }
+}
+
+.ballot-instructions{
+  max-width: 700px;
+  margin: auto;
+  // border: 2px solid $light-blue;
+  background-color: lighten($light-blue, 15%);
+  padding: 20px;
+
+  h1{
+    text-align: center;
+  }
+
+  h2{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+
+.vote-results{
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 30px;
+
+  > h2{
+    flex: 0 0 100%;
+    padding: 10px 0;
+    border-top: 2px solid $light-blue;
+    border-bottom: 2px solid $light-blue;
+    text-align: center;
+
+  }
+  
+  .vote-results-left{
+    flex: 0 0 50%;
+    border-right: 1px solid $light-blue;
+  }
+
+  .vote-results-right{
+    flex: 0 0 50%;
+    border-left: 1px solid $light-blue;
+  }
+
+  p{
+    text-align: center;
+    padding: 20px;
+  }
+
+  h1{
+    font-size: 100px;
+    text-align: center;
+    padding: 20px 20px 0;
+  }
+  
+}
+
+// Your Issues
+.list-item {
+  height: 100px;
+  border: 1px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .checkbox {
+    width: 50px;
+  }
+
+  .buttons {
+    width: 100px;
+  }
+
+  div {
+    border: 1px solid red;
+    height: 50px;
+  }
+}
+
+.list-item-content {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
