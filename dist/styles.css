@@ -143,17 +143,25 @@ p {
   flex-flow: row nowrap;
   justify-content: space-between;
   margin-bottom: 30px; }
-  .vote-buttons-container #vote-for-button,
-  .vote-buttons-container #vote-against-button {
+  .vote-buttons-container .vote {
     flex: 0 0 49%;
     height: 80px;
     display: block;
-    background-color: pink; }
+    border: 2px solid #BDCBCD;
+    color: #51858D;
+    display: flex;
+    padding: 10px;
+    position: relative; }
+    .vote-buttons-container .vote.selected {
+      background-color: #51858D;
+      border-color: #51858D;
+      color: #FFFFFF; }
 
 .ballot-instructions {
   max-width: 700px;
   margin: auto;
-  border: 2px solid #BDCBCD; }
+  background-color: #e9edee;
+  padding: 20px; }
   .ballot-instructions h1 {
     text-align: center; }
   .ballot-instructions h2 {
