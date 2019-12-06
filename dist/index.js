@@ -18,18 +18,16 @@
   var callToAction = document.getElementsByClassName('call-to-action')
   var readMoreBlock = document.getElementsByClassName('read-more-block')
 
-  var oReq = new XMLHttpRequest();
-  oReq.onload = ({ target: { response }}) => {
-    wa = JSON.parse(response).wa;
-    renderBallot()
-  }
-  oReq.open("GET", "https://gomagames.github.io/VoterTab/api/data.json");
-  oReq.send();
+  fetch('https://gomagames.github.io/VoterTab/api/data.json')
+    .then(res => res.json())
+    .then(res => {
+      renderBallot(res.wa)
+    })
 
-  const getBallot = () => wa[2018][Math.floor(Math.random(wa[2018].length)*wa[2018].length)]
+  const getBallot = (wa) => wa[2018][Math.floor(Math.random(wa[2018].length)*wa[2018].length)]
 
-  const renderBallot = () => {
-    let ballot = getBallot()
+  const renderBallot = (wa) => {
+    let ballot = getBallot(wa)
     ballotDescrition.innerHTML = ballot.description
     ballotTitle.innerHTML = ballot.title
     voteForButton.innerHTML = ballot.vote.for
