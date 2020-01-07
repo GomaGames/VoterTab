@@ -1,5 +1,5 @@
 (() => {
-  var wa = VoterTab.data.wa
+  var wa;
   var ballotDescrition = document.getElementById('ballot-description')
   var ballotTitle = document.getElementById('ballot-title')
   var hamburger = document.getElementById('hamburger')
@@ -18,10 +18,16 @@
   var callToAction = document.getElementsByClassName('call-to-action')
   var readMoreBlock = document.getElementsByClassName('read-more-block')
 
-  const getBallot = () => wa[2018][Math.floor(Math.random(wa[2018].length)*wa[2018].length)]
+  fetch('https://gomagames.github.io/VoterTab/api/data.json')
+    .then(res => res.json())
+    .then(res => {
+      renderBallot(res.wa)
+    })
 
-  const renderBallot = () => {
-    let ballot = getBallot()
+  const getBallot = (wa) => wa[2018][Math.floor(Math.random(wa[2018].length)*wa[2018].length)]
+
+  const renderBallot = (wa) => {
+    let ballot = getBallot(wa)
     ballotDescrition.innerHTML = ballot.description
     ballotTitle.innerHTML = ballot.title
     voteForButton.innerHTML = ballot.vote.for
@@ -46,8 +52,6 @@
       endorsements[0].append(endorsementItem)
     })
   }
-
-  renderBallot()
   
   const vote = (vote) => {
     voteResults[0].className = 'vote-results'
