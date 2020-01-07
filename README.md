@@ -10,3 +10,9 @@ Civic Participation Hackathon project
 - go to chrome://extensions/
 - click "Load upacked"
 - select the `dist/` folder
+
+## Firefox
+- go to about:debugging
+- click "This Firefox"
+- click "Load Temporary Add-on"
+- select `dist/index.html`
