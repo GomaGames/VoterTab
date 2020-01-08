@@ -18,13 +18,28 @@
   var callToAction = document.getElementsByClassName('call-to-action')
   var readMoreBlock = document.getElementsByClassName('read-more-block')
 
-  fetch('https://gomagames.github.io/VoterTab/api/data.json')
-    .then(res => res.json())
-    .then(res => {
-      renderBallot(res.wa)
-    })
+  if (navigator.onLine) {
+    fetch('https://gomagames.github.io/VoterTab/api/data.json')
+      .then(res => res.json())
+      .then(res => {
+        renderBallot(res.wa)
+      })
+  } else {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
+        .then((reg) => {
+          fetch('/api/data.json')
+            .then(res => res.json())
+            .then(res => {
+              renderBallot(res.wa)
+            })
+        }).catch((error) => {
+          console.log('Registration failed with ' + error);
+        });
+    }
+  }
 
-  const getBallot = (wa) => wa[2018][Math.floor(Math.random(wa[2018].length)*wa[2018].length)]
+  const getBallot = (wa) => wa[2018][Math.floor(Math.random(wa[2018].length) * wa[2018].length)]
 
   const renderBallot = (wa) => {
     let ballot = getBallot(wa)
@@ -52,14 +67,14 @@
       endorsements[0].append(endorsementItem)
     })
   }
-  
+
   const vote = (vote) => {
     voteResults[0].className = 'vote-results'
     ballotInstructions[0].className = 'ballot-instructions'
     callToAction[0].className = 'call-to-action'
     readMoreBlock[0].className = 'read-more-block'
     ballotVote.innerHTML = `Vote ${vote === 'for' ? '"Yes"' : '"No"'}`
-    if(vote === 'for') {
+    if (vote === 'for') {
       voteForButton.className = 'vote selected'
       voteAgainstButton.className = 'vote'
     } else {

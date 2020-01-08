@@ -1,0 +1,10 @@
+{
+  "name": "VoterTab",
+  "version": "0.0.0.1",
+  "description": "Washington Ballot Measures",
+  "manifest_version": 2,
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+  "offline_enabled": true
+}
