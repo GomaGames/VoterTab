@@ -2,10 +2,10 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
-        './VoterTab/index.html',
-        './VoterTab/index.js',
-        './VoterTab/styles.css',
-        './VoterTab/api/data.json'
+        './index.html',
+        './index.js',
+        './styles.css',
+        './api/data.json'
       ]);
     })
   );
