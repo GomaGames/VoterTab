@@ -26,7 +26,7 @@
       })
   } else {
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
+      navigator.serviceWorker.register('/VoterTab/service-worker.js', { scope: '/VoterTab' })
         .then((reg) => {
           fetch('/api/data.json')
             .then(res => res.json())
